@@ -7,6 +7,7 @@ Example:
     $ python app.py
 """
 import sys
+import csv
 import fire
 import questionary
 from pathlib import Path
@@ -101,15 +102,28 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
+def save_csv(qualifying_loans):
+    """Save the qualifying loans to a chosen CSV file.
+    Args:
+        qualifying_loans (list of lists): The qualifying bank loans.
+    """
+    path_loc = questionary.text("Which path do you want to save this in?").ask()
+    with open(path_loc, 'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        for item in qualifying_loans:
+            csvwriter.writerow(item)
+
 
 def save_qualifying_loans(qualifying_loans):
-    """Saves the qualifying loans to a CSV file.
-
+    """Asks the user if they want to save before proceeding with save function.
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    save = questionary.confirm("Do you want to save?").ask()
+    if save == True:
+        save_csv(qualifying_loans)
+        
 
 
 def run():
@@ -125,6 +139,9 @@ def run():
     qualifying_loans = find_qualifying_loans(
         bank_data, credit_score, debt, income, loan_amount, home_value
     )
+
+    if len(qualifying_loans) == 0:
+        sys.exit("There are no qualifying loans.  Goodbye.")
 
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
