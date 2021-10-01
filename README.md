@@ -9,6 +9,7 @@ This is a python command-line interface application that identfies qualifying lo
 The application is written in Python 3.8 with support from the following packages:  
 
 *[fire] (https://github.com/google/python-fire) - CLI
+
 *[questionary] (https://github.com/tumbo/questionary) - user prompts
 
 
@@ -30,7 +31,7 @@ python app.py
 
 Upon launching the application, you will be greeted with the following prompts.  Pls respond accordingly.
 
-![Loan Qualifier Prompts](Images/Loan_Qualifier_App.png)
+![Loan Qualifier Prompts](Images/Loan_Qualifier_App.PNG)
 
 ## Contributors
 Vishnu Kurella, vishnu.kurella@gmail.com
