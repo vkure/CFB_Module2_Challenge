@@ -1,0 +1,8 @@
+    1  conda activate dev
+    2  cd desktop
+    3  cd CFB_Module2_Challenge/
+    4  history 50 > terminal_history.txt
+    5  git add .
+    6  git commit -m "This includes an updated readme file and final application."
+    7  git push
+    8  history 50 > terminal_history.txt
