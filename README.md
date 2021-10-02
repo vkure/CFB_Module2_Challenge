@@ -1,6 +1,6 @@
 # *Loan Qualifier Application*
 
-This is a python command-line interface application that identfies qualifying loans given a set of user inputs.  The inputs are based on the borrower and potential home purchase.  The application works by taking in a 'daily rate sheet' of loan criteria from various loan providers.  The resulting output is a list of qualifying loans and will be saved in a CSV file specified by the user.
+This is a python command-line interface application that identfies qualifying loans given a set of user inputs.  The inputs are based on the borrower's creditworthiness and the potential home purchase details.  The application works by taking in a 'daily rate sheet' of loan criteria from various loan providers.  The resulting output is a list of qualifying loans and will be saved in a CSV file specified by the user.
 
 ---
 
@@ -29,7 +29,7 @@ To use the loan qualifier application, pls clone the repository and run the **ap
 python app.py
 ```
 
-Upon launching the application, you will be greeted with the following prompts.  Pls respond accordingly.
+Upon launching the application, you will be greeted with the following prompts.  Pls respond accordingly; these are example inputs.
 
 ![Loan Qualifier Prompts](Images/Loan_Qualifier_App.PNG)
 
